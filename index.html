@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="date-time">
+            <time class="current-year">&copy;</time>
+            <time class="current-time"></time>
+        </div>
+    </header>
+
+    <main class="port-container">
+        <div class="main-container">
+            <!-- Dynamic Portfolio Image Section -->
+            <section id="portfolio-image" class="portfolio-image-section">
+                <figure>
+                    <figcaption class="alt-images"></figcaption>
+                    <div class="image-w">
+                        <div class="image-width">
+                            <img id="imgSrc" class="portfolio-img" src="" alt="" />
+                        </div>
+                    </div>
+                </figure>
+            </section>
+
+            <hr />
+
+            <!-- Portfolio Name -->
+            <section id="intro" class="portfolio-name-section">
+                <h4 class="name">
+                    <span class="name-first">NDUKA</span>
+                    <span class="name-middle">KONYHEA</span>
+                    <span class="name-last">PRINCE</span>
+                </h4>
+            </section>
+
+            <hr />
+
+            <!-- About -->
+            <section id="about" class="about-section">
+                <h2 class="section-heading heading">ABOUT</h2>
+                <article class="about-description">
+                    Growing up, the idea of having a dream has alway been strange, people wanting to be doctors at five,
+                    pilot at 10 and engineer at 15. The idea of sticking to just one profession alway appears as a form
+                    of limitation, why limit yourself to just one field? The complexity of my mind couldn’t fathom the
+                    obsession of wanting something bland, something everyone found a purpose in - i’m not saying this to
+                    appease my reader mind that Konyhea has always felt special, no that is far from the truth. I have
+                    struggled and lost, chased dreams and was overcomed, have visions that didn’t turn out to reality -
+                    i’m still a man finding my path and maybe if i had a young obsession about a field maybe just maybe
+                    i will not feel so lost at my old age, that is me - all about Konyhea Prince.
+                </article>
+            </section>
+
+            <hr />
+
+            <!-- Education -->
+            <section id="education" class="education-section">
+                <h2 class="section-heading heading">EDUCATION</h2>
+                <ul class="list">
+                    <li class="list-item">
+                        <strong>Federal University of Technology</strong><br />
+                        <span>Electrical & Electronics Engineering</span>
+                        <p>2017 – 2024</p>
+                    </li>
+                    <li class="list-item">
+                        <strong>ALX Africa - Holberton</strong><br />
+                        <span>Full Stack Track</span>
+                        <p>2022 – 2024</p>
+                    </li>
+                    <li class="list-item">
+                        <strong>AltSchool Africa</strong><br />
+                        <span>Frontend Engineering</span>
+                        <p>2024 – 2025</p>
+                    </li>
+                </ul>
+            </section>
+
+            <hr />
+
+            <!-- Inspirations -->
+            <section id="inspirations" class="inspirations-section">
+                <h2 class="section-heading heading">INSPIRATION </h2>
+                <ul class="list">
+                    <li class="list-item">YE 
+                        <img 
+                        class="arrow"
+                        src="./arrow_outward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="External link" /></li>
+                    <li class="list-item"> Leonardo da vinci
+                        <img
+                            class="arrow"
+                            src="./arrow_outward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="External link" /></li>
+                    <li class="list-item">chimamanda ngozi adichie
+                        <img
+                            class="arrow"
+                            src="./arrow_outward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="External link" /></li>
+                    <li class="list-item">LIONEL MESSI 
+                        <img
+                            class="arrow"
+                            src="./arrow_outward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="External link" />
+                        </li>
+                </ul>
+            </section>
+
+            <hr />
+
+            <!-- Research Interest -->
+            <section id="research" class="research-section">
+                <h2 class="section-heading heading">RESEARCH INTEREST</h2>
+                <article class="research-description">
+                    I like animations, arts, colors, fashion and music - philosophy sounds very interesting. I would love to try that out, but below are things that have caught my browns and I would love to get a mastery in.
+                </article>
+                <ul class="list research-list">
+                    <li class="list-item">Brand Design</li>
+                    <li class="list-item">UI Engineering</li>
+                    <li class="list-item">ML / AI Engineering</li>
+                </ul>
+            </section>
+
+            <hr />
+
+            <!-- Programming Languages -->
+            <section id="skills" class="programming-section">
+                <h2 class="section-heading heading">PROGRAMMING LANGUAGE</h2>
+                <ul class="list">
+                    <li class="list-item">Python</li>
+                    <li class="list-item">C</li>
+                    <li class="list-item">React</li>
+                    <li class="list-item">JavaScript</li>
+                </ul>
+            </section>
+
+            <hr />
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <h2 class="section-heading heading">CONTACT</h2>
+                <address class="contact-details">
+                    <p><strong>Location:</strong> Agbor-Nta, Delta State, Nigeria</p>
+                    <p><strong>Email:</strong> <a href="mailto:you@example.com">ndukaprincek@gmail.com</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:+2348012345678">+234 801 234 5678</a></p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ndukaprince/""
+                            target=" _blank">linkedin.com/in/ndukaprincek</a></p>
+                </address>
+            </section>
+        </div>
+    </main>
+
+    <script type="module">
+        import { todayDate, todayTime } from './utils.js';
+
+        const currentYear = document.querySelector('.current-year');
+        currentYear.textContent += todayDate();
+
+        const currentTime = document.querySelector('.current-time');
+        currentTime.textContent = todayTime();
+    </script>
+</body>
+
+</html>

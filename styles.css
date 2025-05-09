@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+
+/* CSS RESET  */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    scrollbar-width: none;
+    line-height: 1;
+    font-family: "PT Mono", monospace;
+    background: var(--bgcolor);
+    height: 100vh;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --bgcolor: rgb(230, 231, 226);
+    --headcolor: #E8e9eb;
+    --fontcolor: gray
+
+}
+
+
+/* dynamic images  */
+#imgSrc {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* styling header date and time */
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: -2px;
+    z-index: 999;
+}
+
+.header .date-time {
+    margin: 3px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .7rem;
+}
+
+.port-container {
+    margin-top: 15vh;
+    margin-inline: 10px;
+    position: relative;
+    height: 150vh;
+    background: white;
+}
+
+
+
+.main-container {
+    position: sticky;
+    height: 100vh;
+    overflow-y: auto;
+    border: 1px solid black;
+    padding: 1.2em;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+
+}
+
+
+
+.main-container .portfolio-image-section {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+#portfolio-image figure figcaption {
+    font-size: .7rem;
+    text-align: left;
+    color: gray;
+}
+
+
+#portfolio-image figure .image-w  {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#portfolio-image figure .image-w  .image-width {
+    width: 75%;
+}
+
+
+#portfolio-image figure img {
+    margin-top: 14vh;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+hr {
+    height: 20px;
+    background-color: #ccc;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.main-container #intro {
+    width: fit-content;
+    background: var(--headcolor);
+    padding: .2em;
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 630px) {
+    .main-container #intro {
+    font-size: 3.8rem;
+}
+}
+
+ .heading {
+    background: var(--headcolor);
+    width: fit-content;
+    font-size: 2rem;
+    margin-bottom: .9em;
+}
+
+.main-container .about-section article {
+    min-width: 80%;
+    font-size: .8rem;
+    color: var(--fontcolor);
+}
+
+.main-container .education-section .list-item {
+    margin-bottom: .6em;
+    font-size: .8rem;
+    color: var(--fontcolor);
+}
+
+.main-container .research-section article {
+    min-width: 80%;
+    font-size: .8rem;
+    color: var(--fontcolor);
+    margin-bottom: 1.2em;
+}
+
+
+
+.main-container .research-section .research-list {
+        margin-bottom: .6em;
+    font-size: .8rem;
+    color: var(--fontcolor);
+}
+
+.main-container .programming-section .list {
+            margin-bottom: .6em;
+    font-size: .8rem;
+    color: var(--fontcolor);
+}
+
+.main-container .contact-section .contact-details {
+    font-size: .7rem;
+    color: var(--fontcolor);
+}
+
+a {
+    text-decoration: none;
+    color: var(--fontcolor)
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (min-width: 630px) {
+    .main-container .contact-section .contact-details {
+        display: flex;
+        gap: .7em;
+        flex-wrap: wrap;
+    }
+
+
+    .main-container #inspirations .list-item:hover {
+        background: greenyellow;
+        transition: background 1ms ease-out;
+}
+
+}
+
+.main-container .contact-section .contact-details p:hover  {
+    background: black;
+    color: white;
+    transition: background 1s ease-in;
+}
+
+.main-container .contact-section .contact-details p:hover a {
+    color: white;
+}
+
+
+.main-container #inspirations .list-item {
+    text-transform: uppercase;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.main-container #inspirations .list-item .arrow {
+    /* display: none; */
+    margin-left: auto;
+}
